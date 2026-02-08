@@ -1,7 +1,7 @@
 /*******************************************************/
-// P5.play: t04_collision
-// Sprite falls due to gravity & collides with the floor
-// Written by ???
+// P5.play: t01_create_sprite
+// Create a sprite
+/// Written by ???
 /*******************************************************/
 	
 /*******************************************************/
@@ -9,6 +9,18 @@
 /*******************************************************/
 function setup() {
 	console.log("setup: ");
+	cnv = new Canvas(1000, 1000);
+	goatmilk = new Sprite(100, 100, 100, 100, 'd');
+	blue.color = 'blue';
+	circle = new Sprite(200, 200, 200, 'd');
+	green.color = 'green';
+	goatmilk.rotationSpeed = 2;
+	goatmilk.vel.x = 2;
+	world.gravity.y = 10;
+	platform_1 = new Sprite(400, 400, 300, 50, 'k');
+
+
+
 
 }
 	
@@ -16,7 +28,7 @@ function setup() {
 // draw()
 /*******************************************************/
 function draw() {
-	
+	background('black');
 }
 
 /*******************************************************/

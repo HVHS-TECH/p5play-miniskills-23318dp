@@ -9,6 +9,12 @@
 /*******************************************************/
 function setup() {
 	console.log("setup: ");
+	cnv = new Canvas(1000, 1000);
+	mike = new Sprite(100, 100, 100, 100, 'd');
+	blue.color = 'blue';
+	circle = new Sprite(200, 200, 200, 'd');
+
+green.color = 'green';
 
 }
 	
@@ -16,7 +22,7 @@ function setup() {
 // draw()
 /*******************************************************/
 function draw() {
-	
+	background('black');
 }
 
 /*******************************************************/

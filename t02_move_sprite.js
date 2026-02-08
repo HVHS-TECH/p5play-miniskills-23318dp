@@ -1,7 +1,7 @@
 /*******************************************************/
-// P5.play: t02_move_sprite
-// Move a sprite
-// Written by ???
+// P5.play: t01_create_sprite
+// Create a sprite
+/// Written by ???
 /*******************************************************/
 	
 /*******************************************************/
@@ -9,6 +9,16 @@
 /*******************************************************/
 function setup() {
 	console.log("setup: ");
+	cnv = new Canvas(1000, 1000);
+	goatmilk = new Sprite(100, 100, 100, 100, 'd');
+	blue.color = 'blue';
+	circle = new Sprite(200, 200, 200, 'd');
+	green.color = 'green';
+	goatmilk.rotationSpeed = 2;
+	goatmilk.vel.x = 2;
+
+
+
 
 }
 	
@@ -16,7 +26,7 @@ function setup() {
 // draw()
 /*******************************************************/
 function draw() {
-	
+	background('black');
 }
 
 /*******************************************************/
