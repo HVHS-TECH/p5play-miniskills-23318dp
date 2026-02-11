@@ -47,6 +47,7 @@ function setup() {
   alien.bounciness = 1;
 
   alien.friction = 0;
+  
 
 }
 	
