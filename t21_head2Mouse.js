@@ -1,24 +1,74 @@
 /*******************************************************/
-// P5.play: t21_head2Mouse
-// Move sprite towards the mouse' position
+// P5.play: t20_load_images
+// load & display images
 // Written by ???
 /*******************************************************/
 	
 /*******************************************************/
 // setup()
 /*******************************************************/
-function setup() {
-	console.log("setup: ");
+function preload() {
+
+  imgBG   = loadImage('../assets/images/space.png');
+
+  imgFace = loadImage('../assets/images/face.png');
 
 }
+
+function setup() {
+	console.log("setup: ");
+	cnv = new Canvas(1000, 1000);
+	wallLH  = new Sprite(0, height/2, 8, height, 'k');
+	wallLH.color = 'black';
+	wallRH  = new Sprite(1000, 500, 100, 1000, 'k');
+	wallTop = new Sprite(500, 0, 1000, 100, 'k');
+	wallBot = new Sprite(500, 1000, 1000, 100, 'k');
+	world.gravity.y = 10;
+	alienGroup = new Group();
+
+
+
+	Circle1 = new Sprite(width/2, height/2, 50, 'd');
+	Circle1.bounciness = 1;
+	Circle1.friction   = 0;
+	Circle1.image = (imgFace);
+	imgFace.resize(50, 50);
+
+    jcole = new Sprite(50, 50, 50, 50, 'd');
+
+    jcole.color = 'green';
+
+    jcole.rotationSpeed = 2;
+		
+    jcole.moveTowards(mouseX, mouseY, p);
+
+    for (i = 0; i < 100; i++) {
+    alien = new Sprite(width / 2, height / 2, 50, 50, 'd');
+    alien.vel.x = random();
+    alien.vel.y = random();
+    alien.bounciness = 1;
+    alien.friction = 0;
+    const VELARRAY = [-1, 1];
+    randNum = random(4, 7) * random(VELARRAY);
+	alienGroup.add(alien);
+	
+}
+   
+
+if (mouse.presses()) {
+
+jcole.moveTo(xPos, yPos, n);
+
+}
+}	
 	
 /*******************************************************/
 // draw()
 /*******************************************************/
 function draw() {
-	
+	background(imgBG); 
 }
 
 /*******************************************************/
 //  END OF APP
-/*******************************************************/
+/*******************************************************/ 	
