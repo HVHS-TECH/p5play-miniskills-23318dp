@@ -34,14 +34,9 @@ function setup() {
 	Circle1.image = (imgFace);
 	imgFace.resize(50, 50);
 
-    jcole = new Sprite(50, 50, 50, 50, 'd');
 
-    jcole.color = 'green';
-
-    jcole.rotationSpeed = 2;
 		
-    jcole.moveTowards(mouseX, mouseY, p);
-
+ 
     for (i = 0; i < 100; i++) {
     alien = new Sprite(width / 2, height / 2, 50, 50, 'd');
     alien.vel.x = random();
@@ -53,13 +48,7 @@ function setup() {
 	alienGroup.add(alien);
 	
 }
-   
-
-if (mouse.presses()) {
-
-jcole.moveTo(xPos, yPos, n);
-
-}
+     
 }	
 	
 /*******************************************************/
@@ -67,8 +56,18 @@ jcole.moveTo(xPos, yPos, n);
 /*******************************************************/
 function draw() {
 	background(imgBG); 
+	alienGroup.collides(Circle1, func2Call);
+    function func2Call(_ssss,_Circle1) {
+    _ssss.remove();
+
+    }
+	if (mouse.presses()) {
+        
+        Circle1.moveTo(random(0, 1000), 0, 5);
+
+    }
 }
 
 /*******************************************************/
 //  END OF APP
-/*******************************************************/ 	
+/*******************************************************/
